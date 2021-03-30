@@ -90,14 +90,123 @@ function findDeletedNumber(arr, mixArr) {
 }
 console.log(findDeletedNumber(array1,array2))
 
+//Sum Mixed Array
+
 let myArray = [5,4,'a','b',3]
 
-let total = 0
 function sumMix(x){
-  for(i=0;i<x.length;i++) {
-    total = total + x[i]
+  let total = 0
+  for(const val of x) {
+    total += Number(val);
   }
   return total
 
 }
-console.log(sumMix(myArray))
+
+var list1 = [
+  { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C' },
+  { firstName: 'Anna', lastName: 'R.', country: 'Liechtenstein', continent: 'Europe', age: 52, language: 'JavaScript' },
+  { firstName: 'Ramon', lastName: 'R.', country: 'Paraguay', continent: 'Americas', age: 29, language: 'Ruby' },
+  { firstName: 'George', lastName: 'B.', country: 'England', continent: 'Europe', age: 81, language: 'C' },
+];
+
+function countLanguages(list) {
+  // thank you for checking out the Coding Meetup kata :)
+  let obj = {
+    C: 0,
+    JavaScript: 0,
+    Ruby: 0
+  }
+  for(i=0;i<list.length; i++) {
+    if(list[i].language === 'C') {
+      obj.C = obj.C + 1
+    }else if(list[i].language === 'JavaScript') {
+      obj.JavaScript = obj.JavaScript + 1
+    }else if(list[i].language === 'Ruby') {
+      obj.Ruby = obj.Ruby + 1
+    }
+  }
+  return obj
+  
+}
+
+function countLanguages(list) {
+  // thank you for checking out the Coding Meetup kata :)
+  let obj = {
+    C: 0,
+    JavaScript: 0,
+    Ruby: 0
+  }
+  list1.forEach(element => {
+    if(element.language === 'C') {
+      obj.C = obj.C + 1
+    }else if(element.language === 'JavaScript') {
+      obj.JavaScript = obj.JavaScript + 1
+    }else if(element.language === 'Ruby') {
+      obj.Ruby = obj.Ruby + 1
+    }
+  });
+  return obj
+}
+
+console.log(countLanguages(list1))
+
+function countLanguages(list) {
+  // thank you for checking out the Coding Meetup kata :)
+ let obj = {}
+ list.array.forEach(element => {
+   element.language = obj.language
+ });
+ console.log(obj)
+
+}
+
+
+console.log(countLanguages(list1))
+
+let myArray = [1, 2, 3, 4, 5, 6]
+
+function divisibleBy(numbers, divisor){
+  return console.log(numbers.filter(items => items % divisor === 0))
+}
+
+
+function divisibleBy1(numbers, divisor) {
+  let myPlaceHolder = []
+  for(i=0;i<numbers.length;i++) {
+    if(numbers[i] % divisor === 0) {
+      myPlaceHolder.push(numbers[i])
+    }
+  }
+  return console.log(myPlaceHolder)
+}
+
+divisibleBy1(myArray,2)
+myString = "Shoes are nice"
+function stringToArray(string){
+	// code code code
+  let newArray = string.split(' ').join('')
+  return console.log(newArray)
+}
+
+stringToArray(myString)
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  if(enteredCode === correctCode && Date.parse(currentDate) <= Date.parse(expirationDate)){
+    return true
+  } else return false
+}
+
+function solution(number){
+  var sum = 0;
+  
+  for(var i = 1;i< number; i++){
+    if(i % 3 == 0 || i % 5 == 0){
+      sum += i
+    }
+  }
+  return sum;
+}
+
+console.log(solution(10))
+
