@@ -419,11 +419,24 @@
 
 //Yor task is to write function factorial
 
-function factorial(n){
-  if (n=== 0 || n === 1)
-     return 1;
-   for (let i = n - 1; i >= 1; i--) {
-     n *= i;
-   }
-   return n;
- }
+// function factorial(n){
+//   if (n=== 0 || n === 1)
+//      return 1;
+//    for (let i = n - 1; i >= 1; i--) {
+//      n *= i;
+//    }
+//    return n;
+//  }
+
+
+//Jaden Casing Strings
+
+
+function toJadenCase(str) {
+  str = str.split(' ')
+  str.map((element) => {
+   element[0].toUpperCase() + element.substring(1);
+  }).join()
+}
+
+console.log(toJadenCase("My poop is very large"))
