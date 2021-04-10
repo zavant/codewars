@@ -223,3 +223,9 @@ function getCount(str) {
 }
 
 console.log(getCount("Paneninou"))
+
+function highAndLow(numbers){
+  const myNum = numbers.split(' ')
+  return Math.max.apply(null, myNum) + ' ' + Math.min.apply(null, myNum)
+}
+
