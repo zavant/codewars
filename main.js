@@ -239,16 +239,30 @@
 //// Write a function which converts the input string to uppercase.
 ///
 
-function makeUpperCase(str) {
-    // Code here
-    return str.toUpperCase()
-  }
+// function makeUpperCase(str) {
+//     // Code here
+//     return str.toUpperCase()
+//   }
 
 // //  Given a string of arbitrary length with any ascii characters. Write a function to determine whether the string contains the whole word "English".
 // //  The order of characters is important -- a string "abcEnglishdef" is correct but "abcnEglishsef" is not correct.
 // //  Upper or lower case letter does not matter -- "eNglisH" is also correct.
 // //  Return value as boolean values, true for the string to contains "English", false for it does not.
 
-function spEng(sentence){
-    return sentence.toLowerCase().includes("english")
+// function spEng(sentence){
+//     return sentence.toLowerCase().includes("english")
+//   }
+
+// // An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+function isIsogram(str){
+    //...
+    console.log(str)
+    for(i=0;i<= str.length;i++) {
+        if(str === "") {
+          return true
+        }else if(str.toLowerCase().split("").sort().join("").match(/(.)\1+/g)){
+          return false
+        }else return true
+    }
   }
