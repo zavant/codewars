@@ -255,14 +255,41 @@
 
 // // An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
 
-function isIsogram(str){
-    //...
-    console.log(str)
-    for(i=0;i<= str.length;i++) {
-        if(str === "") {
-          return true
-        }else if(str.toLowerCase().split("").sort().join("").match(/(.)\1+/g)){
-          return false
-        }else return true
-    }
+// function isIsogram(str){
+//     //...
+//     console.log(str)
+//     for(i=0;i<= str.length;i++) {
+//         if(str === "") {
+//           return true
+//         }else if(str.toLowerCase().split("").sort().join("").match(/(.)\1+/g)){
+//           return false
+//         }else return true
+//     }
+//   }
+
+// // Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+// // Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+
+const paperwork = (n,m) => {
+  if(n < 1 || m <1 ){
+   return 0
+ }else {
+   return n * m
+ }
+}
+
+
+
+// // Complete the solution so that it returns a formatted string. 
+// // The return value should equal "Value is VALUE" where value is a 5 digit padded number.
+
+
+function solution(value){
+  let newVal = value.toString().split('')
+for(i=0; newVal.length < 5; i++) {
+  newVal.unshift(0)
   }
+  newVal = newVal.join('')
+  return `Value is ${newVal}`
+  
+}
