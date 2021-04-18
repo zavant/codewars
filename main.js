@@ -270,26 +270,34 @@
 // // Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
 // // Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
 
-const paperwork = (n,m) => {
-  if(n < 1 || m <1 ){
-   return 0
- }else {
-   return n * m
- }
-}
+// const paperwork = (n,m) => {
+//   if(n < 1 || m <1 ){
+//    return 0
+//  }else {
+//    return n * m
+//  }
+// }
 
 
 
-// // Complete the solution so that it returns a formatted string. 
-// // The return value should equal "Value is VALUE" where value is a 5 digit padded number.
+// // // Complete the solution so that it returns a formatted string. 
+// // // The return value should equal "Value is VALUE" where value is a 5 digit padded number.
 
 
-function solution(value){
-  let newVal = value.toString().split('')
-for(i=0; newVal.length < 5; i++) {
-  newVal.unshift(0)
-  }
-  newVal = newVal.join('')
-  return `Value is ${newVal}`
+// function solution(value){
+//   let newVal = value.toString().split('')
+// for(i=0; newVal.length < 5; i++) {
+//   newVal.unshift(0)
+//   }
+//   newVal = newVal.join('')
+//   return `Value is ${newVal}`
   
-}
+// }
+
+/*You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left. Considering these factors, write a function that tells you if it is possible to get to the pump or not. Function should return true (1 in Prolog) if it is possible and false (0 in Prolog) if not. The input values are always positive. */
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  if(distanceToPump > mpg * fuelLeft) {
+    return false
+  }else return true
+};
