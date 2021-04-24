@@ -348,37 +348,59 @@
 
 //Fake Binary translator
 
-function fakeBin(x) {
-  let newArray = []
-  x.split('').forEach(element => {
-    if(element < 5) {
-      newArray.push('0')
-    }else newArray.push('1')
-  })
-  return newArray.join('')
+// function fakeBin(x) {
+//   let newArray = []
+//   x.split('').forEach(element => {
+//     if(element < 5) {
+//       newArray.push('0')
+//     }else newArray.push('1')
+//   })
+//   return newArray.join('')
+// }
+
+// console.log(fakeBin('54930934020'))
+
+// //Name Shuffler
+
+// function nameShuffler(str){
+//   return str.split(' ').reverse().join(' ')
+// }
+
+// //Stop gninnipS My sdroW!
+
+// function spinWords(string){
+//   //TODO Have fun :)
+//   let newString = ''
+//   string = string.split(' ')
+//   for(let i=0;i<string.length; i++) {
+//     if(string[i].length >= 5) {
+//       newString = string[i].split('').reverse().join('')
+//       string[i] = newString
+//     }
+//   }return string.join(' ')
+// }
+
+// console.log(spinWords("This is my last serenade"))
+// console.log(spinWords("A world at odds fights for their rights"))
+
+
+//Complete the solution so that the function will break up camel casing, using a space between words.
+
+function solution(string) {return string.replace(/([A-Z])/g, ' $1').trim()}
+
+
+// You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+// Implement a function likes :: [String] -> String, which must take in input array, containing the names of people who like an item. It must return the display text as shown in the examples:
+
+function likes(names) {
+  // TODO
+  if(names.length == 0) {
+    return 'no one likes this'
+  }else if(names.length === 1) {
+    return `${names[0]} likes this`
+  }else if(names.length === 2) {
+    return `${names[0]} and ${names[1]} like this`
+  }else if(names.length === 3) {
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+  }else return `${names[0]}, ${names[1]} and ${names.length -2} others like this`
 }
-
-console.log(fakeBin('54930934020'))
-
-//Name Shuffler
-
-function nameShuffler(str){
-  return str.split(' ').reverse().join(' ')
-}
-
-//Stop gninnipS My sdroW!
-
-function spinWords(string){
-  //TODO Have fun :)
-  let newString = ''
-  string = string.split(' ')
-  for(let i=0;i<string.length; i++) {
-    if(string[i].length >= 5) {
-      newString = string[i].split('').reverse().join('')
-      string[i] = newString
-    }
-  }return string.join(' ')
-}
-
-console.log(spinWords("This is my last serenade"))
-console.log(spinWords("A world at odds fights for their rights"))
