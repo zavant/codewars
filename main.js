@@ -296,8 +296,89 @@
 
 /*You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left. Considering these factors, write a function that tells you if it is possible to get to the pump or not. Function should return true (1 in Prolog) if it is possible and false (0 in Prolog) if not. The input values are always positive. */
 
-const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-  if(distanceToPump > mpg * fuelLeft) {
-    return false
-  }else return true
-};
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//   if(distanceToPump > mpg * fuelLeft) {
+//     return false
+//   }else return true
+// };
+
+
+// Only change code below this line
+// function countdown(n){
+//   if(n<1) {
+//     return []
+//   }else {
+//     const countArray = countdown(n-1)
+//     countArray.unshift(n)
+//     return countArray
+//   }
+// }
+// // Only change code above this line
+
+// console.log(countdown(10))
+
+// function rangeOfNumbers(startNum, endNum) {
+//   if(endNum >= endNum + 1) {
+//     return []
+//   }else {
+//     const countArray = rangeOfNumbers(startNum + 1)
+//     countArray.unshift(startNum)
+//     return countArray
+//   }
+// };
+
+// function rangeOfNumbers(startNum, endNum) {
+//   return startNum === endNum ? [startNum] : [...rangeOfNumbers(startNum, endNum - 1), endNum ];
+// }
+
+// console.log(rangeOfNumbers(1,5))
+
+// All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+
+// Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+
+// Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
+
+// function feast(beast, dish) {
+//   //your function here
+//   if(beast[0] == dish[0] && beast[beast.length - 1] === dish[dish.length -1]) {
+//     return true
+//   } 
+// }
+
+//Fake Binary translator
+
+function fakeBin(x) {
+  let newArray = []
+  x.split('').forEach(element => {
+    if(element < 5) {
+      newArray.push('0')
+    }else newArray.push('1')
+  })
+  return newArray.join('')
+}
+
+console.log(fakeBin('54930934020'))
+
+//Name Shuffler
+
+function nameShuffler(str){
+  return str.split(' ').reverse().join(' ')
+}
+
+//Stop gninnipS My sdroW!
+
+function spinWords(string){
+  //TODO Have fun :)
+  let newString = ''
+  string = string.split(' ')
+  for(let i=0;i<string.length; i++) {
+    if(string[i].length >= 5) {
+      newString = string[i].split('').reverse().join('')
+      string[i] = newString
+    }
+  }return string.join(' ')
+}
+
+console.log(spinWords("This is my last serenade"))
+console.log(spinWords("A world at odds fights for their rights"))
