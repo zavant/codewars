@@ -404,3 +404,15 @@ function likes(names) {
     return `${names[0]}, ${names[1]} and ${names[2]} like this`
   }else return `${names[0]}, ${names[1]} and ${names.length -2} others like this`
 }
+
+
+//Sum of Digits
+function digital_root(n) {
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  total = String(n).split('').map(x=>+x).reduce(reducer)
+  do {
+  if(total >= 10) {
+    total = String(total).split('').map(x=>+x).reduce(reducer)
+  }
+ } while (total >= 10) return total
+}
