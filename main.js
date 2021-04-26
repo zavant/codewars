@@ -386,33 +386,44 @@
 
 //Complete the solution so that the function will break up camel casing, using a space between words.
 
-function solution(string) {return string.replace(/([A-Z])/g, ' $1').trim()}
+// function solution(string) {return string.replace(/([A-Z])/g, ' $1').trim()}
 
 
-// You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
-// Implement a function likes :: [String] -> String, which must take in input array, containing the names of people who like an item. It must return the display text as shown in the examples:
+// // You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+// // Implement a function likes :: [String] -> String, which must take in input array, containing the names of people who like an item. It must return the display text as shown in the examples:
 
-function likes(names) {
-  // TODO
-  if(names.length == 0) {
-    return 'no one likes this'
-  }else if(names.length === 1) {
-    return `${names[0]} likes this`
-  }else if(names.length === 2) {
-    return `${names[0]} and ${names[1]} like this`
-  }else if(names.length === 3) {
-    return `${names[0]}, ${names[1]} and ${names[2]} like this`
-  }else return `${names[0]}, ${names[1]} and ${names.length -2} others like this`
-}
+// function likes(names) {
+//   // TODO
+//   if(names.length == 0) {
+//     return 'no one likes this'
+//   }else if(names.length === 1) {
+//     return `${names[0]} likes this`
+//   }else if(names.length === 2) {
+//     return `${names[0]} and ${names[1]} like this`
+//   }else if(names.length === 3) {
+//     return `${names[0]}, ${names[1]} and ${names[2]} like this`
+//   }else return `${names[0]}, ${names[1]} and ${names.length -2} others like this`
+// }
 
 
-//Sum of Digits
-function digital_root(n) {
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  total = String(n).split('').map(x=>+x).reduce(reducer)
-  do {
-  if(total >= 10) {
-    total = String(total).split('').map(x=>+x).reduce(reducer)
-  }
- } while (total >= 10) return total
-}
+// //Sum of Digits
+// function digital_root(n) {
+//   const reducer = (accumulator, currentValue) => accumulator + currentValue;
+//   total = String(n).split('').map(x=>+x).reduce(reducer)
+//   do {
+//   if(total >= 10) {
+//     total = String(total).split('').map(x=>+x).reduce(reducer)
+//   }
+//  } while (total >= 10) return total
+// }
+
+//Yor task is to write function factorial
+
+function factorial(n){
+  if (n=== 0 || n === 1)
+     return 1;
+   for (let i = n - 1; i >= 1; i--) {
+     n *= i;
+   }
+   return n;
+ }
