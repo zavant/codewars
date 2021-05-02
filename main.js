@@ -439,4 +439,4 @@ function toJadenCase(str) {
   }).join()
 }
 
-console.log(toJadenCase("My poop is very large"))
+console.log(toJadenCase("My shoes are very large"))
