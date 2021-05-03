@@ -415,7 +415,7 @@
 //     total = String(total).split('').map(x=>+x).reduce(reducer)
 //   }
 //  } while (total >= 10) return total
-// }
+/// }
 
 //Yor task is to write function factorial
 
