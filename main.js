@@ -425,18 +425,22 @@
 //    for (let i = n - 1; i >= 1; i--) {
 //      n *= i;
 //    }
-//    return n;
+///    return n;
 //  }
 
 
 //Jaden Casing Strings
 
 
-function toJadenCase(str) {
-  str = str.split(' ')
-  str.map((element) => {
-   element[0].toUpperCase() + element.substring(1);
-  }).join()
-}
+// function toJadenCase(str) {
+//   str = str.split(' ')
+//   str.map((element) => {
+//    element[0].toUpperCase() + element.substring(1);
+//   }).join()
+// }
 
-console.log(toJadenCase("My shoes are very large"))
+// console.log(toJadenCase("My shoes are very large"))
+
+function addBinary(a,b) {
+
+}
