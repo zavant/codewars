@@ -442,5 +442,5 @@
 // console.log(toJadenCase("My shoes are very large"))
 
 function addBinary(a,b) {
-
+ return a + b
 }
