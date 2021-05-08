@@ -441,6 +441,14 @@
 
 // console.log(toJadenCase("My shoes are very large"))
 
-function addBinary(a,b) {
- return a + b
+const myArray = [1,2,3,4,5,6,7]
+const emptyArray = []
+
+const myMult = (a) => {
+    if(a.length > 0) {
+        return a.reduce((x,y) => x * y, 1)
+    }
+    else return 'Empty Array'
 }
+console.log(myMult(myArray))
+console.log(myMult(emptyArray))
