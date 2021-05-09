@@ -452,3 +452,7 @@ const myMult = (a) => {
 }
 console.log(myMult(myArray))
 console.log(myMult(emptyArray))
+
+const items= myArray
+    .filter(x => x >2)
+    .map(n => ({value: n}))
