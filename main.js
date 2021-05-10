@@ -441,18 +441,26 @@
 
 // console.log(toJadenCase("My shoes are very large"))
 
-const myArray = [1,2,3,4,5,6,7]
-const emptyArray = []
+// const myArray = [1,2,3,4,5,6,7]
+// const emptyArray = []
 
-const myMult = (a) => {
-    if(a.length > 0) {
-        return a.reduce((x,y) => x * y, 1)
-    }
-    else return 'Empty Array'
+// const myMult = (a) => {
+//     if(a.length > 0) {
+//         return a.reduce((x,y) => x * y, 1)
+//     }
+//     else return 'Empty Array'
+// }
+// console.log(myMult(myArray))
+// console.log(myMult(emptyArray))
+
+// const items= myArray
+//     .filter(x => x >2)
+//     .map(n => ({value: n}))
+
+function duplicateEncode(word){
+    // ...
+    word = word.split('').filter(ele => ele === ele)
+    console.log(word)
 }
-console.log(myMult(myArray))
-console.log(myMult(emptyArray))
 
-const items= myArray
-    .filter(x => x >2)
-    .map(n => ({value: n}))
+duplicateEncode('Tampon')
