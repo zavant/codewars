@@ -429,7 +429,7 @@
 //  }
 
 
-//Jaden Casing Strings
+//Jaden Casing strings
 
 
 // function toJadenCase(str) {
@@ -463,4 +463,3 @@ function duplicateEncode(word){
     console.log(word)
 }
 
-duplicateEncode('Tampon')
