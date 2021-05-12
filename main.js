@@ -457,9 +457,15 @@
 //     .filter(x => x >2)
 //     .map(n => ({value: n}))
 
-function duplicateEncode(word){
-    // ...
-    word = word.split('').filter(ele => ele === ele)
-    console.log(word)
-}
+// function duplicateEncode(word){
+//     // ...
+//     word = word.split('').filter(ele => ele === ele)
+//     console.log(word)
+// }
 
+
+function isDivisible(n, x, y) {
+    if (n % x === 0 && n % y === 0) {
+      return true
+    }else return false
+  }
