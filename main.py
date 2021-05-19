@@ -13,3 +13,7 @@ def to_jaden_case(string):
     return result
 
 print(to_jaden_case('yes I am a healthy man'))
+
+#Multiply
+def multiply(a, b):
+  return a * b
