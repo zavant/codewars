@@ -12,8 +12,18 @@ def to_jaden_case(string):
             result = ele.capitalize()
     return result
 
-print(to_jaden_case('yes I am a healthy man'))
 
 #Multiply
 def multiply(a, b):
   return a * b
+
+
+#Multiples of 3 or 5
+def solution(number):
+    total = 0
+    for i in range(1, number):
+        if i % 3 == 0 or i % 5 == 0:
+            total += i
+    return total
+
+solution(10)
