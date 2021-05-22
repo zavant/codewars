@@ -33,3 +33,14 @@ def even_or_odd(number):
     if number % 2 == 0:
         return 'Even'
     else: return 'Odd'
+
+def get_count(input_str):
+    num_vowels = 0
+    input_str = list(input_str)
+    for letter in input_str:
+        if letter == 'a' or letter == 'i' or letter == 'e' or letter == 'o' or letter == 'u':
+            num_vowels += 1
+    
+    return print(num_vowels)
+
+get_count("Hello")
