@@ -44,4 +44,5 @@ def get_count(input_str):
     
     return num_vowels
 
+#Square Every Day
 
