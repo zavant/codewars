@@ -46,3 +46,5 @@ def get_count(input_str):
 
 #Square Every Day
 
+def square_digits(num):
+    pass
