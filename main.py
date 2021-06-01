@@ -47,4 +47,7 @@ def get_count(input_str):
 #Square Every Day
 
 def square_digits(num):
-    return num ** 2
+    for number in num:
+        return number ** 2
+
+print(square_digits(5231))
