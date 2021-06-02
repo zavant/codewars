@@ -18,7 +18,7 @@ def multiply(a, b):
   return a * b
 
 
-#Multiples of 3 or 5
+#Multiples of 3 and/or 5
 def solution(number):
     total = 0
     for i in range(1, number):
