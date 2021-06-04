@@ -28,7 +28,7 @@ def solution(number):
 
 solution(10)
 
-#Even or Odd
+##Even or Odd
 def even_or_odd(number):
     if number % 2 == 0:
         return 'Even'
